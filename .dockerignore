@@ -1,0 +1,22 @@
+.DS_Store
+.gitignore
+.gitattributes
+.idea
+tmp
+
+# ignore node_modules
+node_modules
+
+# ignore test results
+coverage
+reports
+*.log
+log/*
+
+# ignore CI/CD config
+Jenkinsfile
+
+# ignore docker parts
+Dockerfile
+docker-compose.yml
+kube-deployment.yml

@@ -1,0 +1,54 @@
+{
+  "name": "network-policies-bot",
+  "version": "0.0.1",
+  "private": true,
+  "description": "A probot app to validate network-policies",
+  "author": "Greg Howdeshell",
+  "license": "ISC",
+  "repository": "https://github.com/gh7199/network-policies-bot.git",
+  "homepage": "https://github.com/gh7199/network-policies-bot",
+  "bugs": "https://github.com/gh7199/network-policies-bot/issues",
+  "keywords": [
+    "probot",
+    "network-policies",
+    "network-policies-bot"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "PORT=3000 probot run ./index.js",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "js-yaml": "^3.14.0",
+    "lodash": "^4.17.20",
+    "node-fetch": "^2.6.0",
+    "probot": "^10.0.1"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "nock": "^12.0.0",
+    "nodemon": "^2.0.0",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}

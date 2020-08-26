@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  network-policies-bot:
+    build: ./
+    image: ${IMAGE}:${TAG}
+    env_file:
+      - ./.env
+    ports:
+      - 3000:3000
+    volumes:
+      - ./index.js:/src/index.js
+      - ./package.json:/src/package.json
+      - ./package-lock.json:/src/package-lock.json
